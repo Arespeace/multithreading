@@ -1,0 +1,4 @@
+﻿  ConcurrentFileCopy.cpp
+C:\Users\14742\Downloads\love1055259415_10688987\C++多线程编程实战Code\9790OS_Chapter_2\ConcurrentFileCopy\ConcurrentFileCopy.cpp(69,36): warning C4302: “类型强制转换”: 从“LPWSTR”到“WORD”截断
+C:\Users\14742\Downloads\love1055259415_10688987\C++多线程编程实战Code\9790OS_Chapter_2\ConcurrentFileCopy\ConcurrentFileCopy.cpp(74,44): warning C4302: “类型强制转换”: 从“LPWSTR”到“WORD”截断
+  ConcurrentFileCopy.vcxproj -> C:\Users\14742\Downloads\love1055259415_10688987\C++多线程编程实战Code\9790OS_Chapter_2\x64\Debug\ConcurrentFileCopy.exe

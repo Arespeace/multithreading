@@ -22,7 +22,7 @@ class CList
 {
 public:
 	CList():dwCount(0),head(0){}
-	CList(T * tElement):dwcount(1).head(new CNode<T>(tElement)){}
+	CList(T * tElement):dwCount(1),head(new CNode<T>(tElement)){}
 	virtual ~CList(){}
 	void Append(CNode<T>*& node, T* tElement);
 	void Insert(T* tElement);
@@ -30,7 +30,8 @@ public:
 	DWORD Count() const { return dwCount; }
 	CNode<T>*& Head() { return head; }
 	T* GetFirst() { return head != NULL ? head->Element() : NULL; }
-	T* GetLast(T* tElement);
+	T* GetLast();
+	T* GetNext(T* tElement);
 	T* Find(DWORD(*Funtion)(T* tParamenter), DWORD dwValue);
 protected:
 	CList(const CList& list);
@@ -57,6 +58,7 @@ void CList<T>::Insert(T* tElement) {
 		head = new CNode<T>{ tElement };
 		return;
 	}
+	CNode<T>* tmp = head;
 	CNode = new CNode<T>(tElement);
 	head->next() = tmp;
 
@@ -67,12 +69,12 @@ bool CList<T>::Remove(T* tElement) {
 		return NULL;
 	}
 	if (head->Element() == tElement) {
-		CNode<T>* tmp = heaed;
+		CNode<T>* tmp = head;
 		head = head->next;
 
 		delete tmp;
 		dwCount--;
-		reutn true;
+		return true;
 	}
 	CNode<T>* tmp = head;
 	CNode<T>* lst = head->Next();
